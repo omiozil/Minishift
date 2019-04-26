@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd         http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+	<!-- <cxf:cxfEndpoint id="routerEndpoint" address="http://localhost:9003/CamelContext/RouterPort" 
+		serviceClass="org.apache.hello_world_soap_http.GreeterImpl" /> -->
+	<!-- <bean id="soapReq" class="org.example.dsl.RequestProcessor" /> -->
+	<!-- <cxf:cxfEndpoint address="https://crmdmssbox.inservices.tatamotors.com/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" 
+		endpointName="s:Default" id="serviceEndpoint" serviceName="s:Siebel_spcContact" 
+		wsdlURL="SiebelContact.wsdl" xmlns:s="http://siebel.com/asi/"/> -->
+		
+	<cxf:cxfEndpoint
+		address="http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx"
+		endpointName="s:HolidayService2Soap12" id="serviceEndpoint"
+		serviceName="s:HolidayService2" wsdlURL="HolidayService2.wsdl"
+		xmlns:s="http://www.holidaywebservice.com/HolidayService_v2/" />
+		
+		
+	<camelContext id="camelContext-3a3b00ab-0c45-4437-ba7b-a0ae39e488b6"
+		streamCache="true" xmlns="http://camel.apache.org/schema/spring" >
+		<dataFormats>
+			<json id="json" library="Jackson" />
+		</dataFormats>
+		<route id="RT1">
+			<from id="_from1"
+				uri="restlet:http://{{user.Host}}:{{port.WSDL}}/wsdl/example?restletMethod=POST" />
+			<log id="_log1" message="Request Received From User_${body}" />
+			<unmarshal id="_unmarshal1" ref="json" />
+			<setHeader headerName="cellularPhone" id="_setHeader1">
+				<jsonpath>$.cellularPhone</jsonpath>
+			</setHeader>
+			<setHeader headerName="firstName" id="_setHeader2">
+				<jsonpath>$.firstName</jsonpath>
+			</setHeader>
+			<setHeader headerName="lastName" id="_setHeader3">
+				<jsonpath>$.lastName</jsonpath>
+			</setHeader>
+			<setHeader headerName="personUId" id="_setHeader4">
+				<jsonpath>$.personUId</jsonpath>
+			</setHeader>
+			<!-- <convertBodyTo type="java.lang.String"/> -->
+			<!-- <removeHeaders pattern="*" /> -->
+			<setBody id="_setBody1">
+				<simple>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;soap12:Envelope xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap12=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;
+  &lt;soap12:Body&gt;
+    &lt;GetHolidaysForMonth xmlns=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+      &lt;countryCode&gt;Canada&lt;/countryCode&gt;
+      &lt;year&gt;2019&lt;/year&gt;
+      &lt;month&gt;09&lt;/month&gt;
+    &lt;/GetHolidaysForMonth&gt;
+  &lt;/soap12:Body&gt;
+&lt;/soap12:Envelope&gt;</simple>
+			</setBody>
+			<!-- <setHeader headerName="operationName" id="_setHeader5"> <constant>SiebelContactInsert_Input</constant> 
+				</setHeader> -->
+			<!-- <setHeader headerName="Content-Type"> <constant>text/xml;charset=UTF-8</constant> 
+				</setHeader> -->
+			<!-- <setHeader headerName="operationNamespace" id="_setHeader6"> <constant>http://siebel.com/asi/</constant> 
+				</setHeader> -->
+			<log id="_log2" message="Request Sent to Siebel______ ${body}" />
+			<to id="_to2" uri="log:before?showHeaders=true" />
+			<!-- <to id="_to1" uri="restlet:https://{{wsdl.URL}}/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute&amp;restletMethod=POST" 
+				/> -->
+			<to id="_to1" uri="cxf:bean:serviceEndpoint?dataFormat=MESSAGE" />
+			
+			
+			<setHeader headerName="holidays">
+				<xpath resultType = "java.lang.String">/GetHolidaysForMonthResponse/GetHolidaysForMonthResult/Holiday/Country</xpath>
+			</setHeader>
+			
+			<log message="Header is___________________${header.holidays}"></log>
+			
+			
+			<log id="_log3" message="Response Body Received at Siebel______ ${body}" />
+		</route>
+	</camelContext>
+</beans>
+
+
+
+
+
