@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsdLocal1="http://www.siebel.com/xml/Contact%20Interface"
+	targetNamespace="http://siebel.com/asi/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/asi/">
+	<types>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified" xmlns:xsdLocal1="http://www.siebel.com/xml/Contact%20Interface"
+			targetNamespace="http://www.siebel.com/xml/Contact%20Interface"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:annotation>
+				<xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All
+					rights reserved. Siebel XSD Generation</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="ListOfContactInterface" type="xsdLocal1:ListOfContactInterface"></xsd:element>
+			<xsd:complexType name="ListOfContactInterfaceTopElmt">
+				<xsd:sequence>
+					<xsd:element name="ListOfContactInterface" maxOccurs="1"
+						minOccurs="1" type="xsdLocal1:ListOfContactInterface"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfContactInterface">
+				<xsd:sequence>
+					<xsd:element name="Contact" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:Contact"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="Contact">
+				<xsd:sequence>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Alias" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Assistant" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="BirthDate" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="CellularPhone" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Comment" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="OrganizationName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="EmailAddress" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Branch" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="FaxPhone" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="FirstName" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="HomePhone" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Income" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IncomeCurrencyCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="IncomeExchangeDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="JobTitle" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="LastName" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="LoginName" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Gender" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalTitle" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerMiddleName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerFirstName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerIntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerLastName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerPrimaryOrganization"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ManagerUId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="MiddleName" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="MaritalStatus" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="StdCode" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="MotherTongue" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="WeddingAnniversaryDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="RegistrationNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonUId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PreferredCommunications" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PreferredLanguageCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PrimaryOrganization" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Department" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="SocialSecurityNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Status" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="SuppressAllCalls" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SuppressAllEmails" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SuppressAllMailings" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TimeZoneId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TimeZoneName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="WorkPhone" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="WorkPhoneExtension" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SuppressAllSMS" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="JobTitleeCustomer" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PortalUserId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDecoration" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMBranch" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="INSOccupation" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMCellPhone" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMConRelation" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ListOfRelatedAccount" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfRelatedAccount"></xsd:element>
+					<xsd:element name="ListOfAlternatePhone" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfAlternatePhone"></xsd:element>
+					<xsd:element name="ListOfCommunicationAddress"
+						maxOccurs="1" minOccurs="0" type="xsdLocal1:ListOfCommunicationAddress"></xsd:element>
+					<xsd:element name="ListOfRelatedSalesRep" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfRelatedSalesRep"></xsd:element>
+					<xsd:element name="ListOfRelatedHouseholds" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfRelatedHouseholds"></xsd:element>
+					<xsd:element name="ListOfRelatedOrganization"
+						maxOccurs="1" minOccurs="0" type="xsdLocal1:ListOfRelatedOrganization"></xsd:element>
+					<xsd:element name="ListOfPersonalAddress" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfPersonalAddress"></xsd:element>
+					<xsd:element name="ListOfOpportunity" maxOccurs="1"
+						minOccurs="0" type="xsdLocal1:ListOfOpportunity"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfRelatedAccount">
+				<xsd:sequence>
+					<xsd:element name="RelatedAccount" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:RelatedAccount"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="RelatedAccount">
+				<xsd:sequence>
+					<xsd:element name="Account" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="AccountLocation" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AccountOrganization" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfAlternatePhone">
+				<xsd:sequence>
+					<xsd:element name="AlternatePhone" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:AlternatePhone"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="AlternatePhone">
+				<xsd:sequence>
+					<xsd:element name="AlternatePhone" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AlternatePhoneMediumType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AlternatePhoneName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfCommunicationAddress">
+				<xsd:sequence>
+					<xsd:element name="CommunicationAddress" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:CommunicationAddress"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CommunicationAddress">
+				<xsd:sequence>
+					<xsd:element name="AlternateEmailAddress" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CommunicationAddressMediumType"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CommunicationAddressName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfRelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="RelatedSalesRep" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:RelatedSalesRep"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="RelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="Position" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Login" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Division" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfRelatedHouseholds">
+				<xsd:sequence>
+					<xsd:element name="RelatedHouseholds" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:RelatedHouseholds"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="RelatedHouseholds">
+				<xsd:sequence>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="HouseholdNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="HouseHoldName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfRelatedOrganization">
+				<xsd:sequence>
+					<xsd:element name="RelatedOrganization" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:RelatedOrganization"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="RelatedOrganization">
+				<xsd:sequence>
+					<xsd:element name="Organization" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfPersonalAddress">
+				<xsd:sequence>
+					<xsd:element name="PersonalAddress" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:PersonalAddress"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="PersonalAddress">
+				<xsd:sequence>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalAddressName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalCity" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalCountry" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalPostalCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalState" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalStreetAddress" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PersonalStreetAddress2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AddressId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMPanchayat" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMTaluka" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMDistrict" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMArea" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PACountry" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PAState" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PADistrict" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PACity" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PATMTaluka" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PAPostalCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Latitude" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Longitude" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunity">
+				<xsd:sequence>
+					<xsd:element name="Opportunity" maxOccurs="unbounded"
+						minOccurs="0" type="xsdLocal1:Opportunity"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="Opportunity">
+				<xsd:sequence>
+					<xsd:element name="TMEventNamePick" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="OptyFinancier" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SalesStage" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="BusinessUnit" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="KeyContactId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SourceOfProspect" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Description" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Channel" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ParentProductLine" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ProductLine" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="OptyFinancierId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="IntendedApplication" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SalesMethodId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Type" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="AccountId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="CurrencyCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PrimaryRevenueCloseDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Name" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMLOB" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Quality" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TKMTGM" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="CustomerAccountId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PortalUserId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMSorceOfContact" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SourceOfContact" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FOSReferralAccount" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ReferralType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ReferralCustomer" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SrcConId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ClosureSummary" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PrimaryProductId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PrimarySourceId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ProductId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ReasonWonLost" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMActualResponsedate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMCustomerEnqRefNo" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDateTimeofEnquiry" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDXRefType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPlannedResponsedate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMRainbowFlag" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMTentativeResponsedate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLossAnalysis" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLosttoBrand" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLosttoSubBrand" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMMileage" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMModelYear" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPostponedDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CustomerType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMAddnlBrandComptn" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMAddnlBrandTML" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMCustomerCategory" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPLForExchange" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPPLForExchange" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMFinanceRequired" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDeliveryTimeFrame" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBReferrerMobileNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBReferrerEmpId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBNameoftheReferrer" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBEmpId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBEmpCity" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMZBCompanyoftheReferrer" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPurpose" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMDistanceTravelled" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDrivenBy" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMFamilySize" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="BudgetAmtDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMBodyType" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMCordys" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMCustomerSegment" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMFleetSize" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMMMGeography" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMNonFleetSize" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMCVCustomerType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMSPDGFitment" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="IntermediaryAccountId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLiveDeal" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Make" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Model" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMCompetitor" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMCompetitorProd" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMModel" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMIntermediaryAccount" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMUniqueOptyIntId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLatitude" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMLongitude" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PrimaryEventId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMAgeofVehicle" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMInterestedinExchange" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMRefPLId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMRegistrationNo" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMSrcAssetId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMSrcChassisNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LastActivityId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ListOfOpportunityRelatedOrganization"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfOpportunityRelatedOrganization"></xsd:element>
+					<xsd:element name="ListOfOpportunityRelatedSalesRep"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfOpportunityRelatedSalesRep"></xsd:element>
+					<xsd:element name="ListOfOpportunityRelatedActivities"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfOpportunityRelatedActivities"></xsd:element>
+					<xsd:element name="ListOfOpportunityRelatedCampaigns"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfOpportunityRelatedCampaigns"></xsd:element>
+					<xsd:element name="ListOfOpportunityRelatedProducts"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfOpportunityRelatedProducts"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunityRelatedOrganization">
+				<xsd:sequence>
+					<xsd:element name="OpportunityRelatedOrganization"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:OpportunityRelatedOrganization"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="OpportunityRelatedOrganization">
+				<xsd:sequence>
+					<xsd:element name="Organization" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunityRelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="OpportunityRelatedSalesRep"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:OpportunityRelatedSalesRep"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="OpportunityRelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="Position" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Login" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Division" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunityRelatedActivities">
+				<xsd:sequence>
+					<xsd:element name="OpportunityRelatedActivities"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:OpportunityRelatedActivities"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="OpportunityRelatedActivities">
+				<xsd:sequence>
+					<xsd:element name="PlannedEnd" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="IntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PlannedStart" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Comments" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ActivityType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ActivityUID" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="OpportunityId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ActivityStatus" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ActualEnd" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="AssignedTo" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="NextPlannedDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Description2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PriceoftheCompetition" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PVBUDone" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PVBUStatus" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PVBUType" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMAmount" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMActualEnd" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMActualStartDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMBankDetails" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMDTTMMeeting" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMFeedbackDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMIntegrationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLastDateofRecipent" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMLevelofbidders" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMNoofbidders" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMOutcomeoftheMeeting" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPlannedCompletiondate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMPlannedStartDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMQualifiedEvaluation" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMSubmissionDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMTenderOfferValidity" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMTenderOpendate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMValidity" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="BriefTechnicalSpecifications"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Model" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="TMLevel" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Mode" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="PrimaryOwnerId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SubType" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Response" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ListOfActivitiesRelatedSalesRep"
+						maxOccurs="1" minOccurs="0"
+						type="xsdLocal1:ListOfActivitiesRelatedSalesRep"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunityRelatedCampaigns">
+				<xsd:sequence>
+					<xsd:element name="OpportunityRelatedCampaigns"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:OpportunityRelatedCampaigns"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="OpportunityRelatedCampaigns">
+				<xsd:sequence>
+					<xsd:element name="CampaignName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfOpportunityRelatedProducts">
+				<xsd:sequence>
+					<xsd:element name="OpportunityRelatedProducts"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:OpportunityRelatedProducts"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="OpportunityRelatedProducts">
+				<xsd:sequence>
+					<xsd:element name="Product" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ProductQuantity" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ParentProductLine" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ProductLine" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Description" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMQRResponse" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMQRSummary" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SalesRepOrganizationId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TMBriefSpec" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ProductId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="OpptyId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="SalesRepPositionId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfActivitiesRelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="ActivitiesRelatedSalesRep"
+						maxOccurs="unbounded" minOccurs="0"
+						type="xsdLocal1:ActivitiesRelatedSalesRep"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ActivitiesRelatedSalesRep">
+				<xsd:sequence>
+					<xsd:element name="Id" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Login" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="IsPrimaryMVG" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="operation" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="searchspec" type="xsd:string"></xsd:attribute>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified" targetNamespace="http://siebel.com/asi/"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.siebel.com/xml/Contact%20Interface"></xsd:import>
+			<xsd:element name="SiebelContactInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactSynchronize_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactSynchronize_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactQueryById_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PrimaryRowId" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactQueryById_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMPCSiebelContactQueryByExample_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMPCSiebelContactQueryByExample_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactQueryById_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PrimaryRowId" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactQueryById_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMPCSiebelContactInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMPCSiebelContactInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RainboInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RainboInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactQueryById_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PrimaryRowId" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactQueryById_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactQueryByExample_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactQueryByExample_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactQueryByExample_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZBSiebelContactQueryByExample_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMCVSiebelContactInsertOrUpdate_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="TMCVSiebelContactInsertOrUpdate_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactQueryByExample_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SFATMCVContactQueryByExample_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactInsert_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactInsert_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactDelete_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+						<xsd:element name="StatusObject" minOccurs="0"
+							type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SiebelContactDelete_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfContactInterface"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="SiebelContactInsertOrUpdate_Input">
+		<part name="SiebelContactInsertOrUpdate_Input" element="tns:SiebelContactInsertOrUpdate_Input"></part>
+	</message>
+	<message name="SiebelContactInsertOrUpdate_Output">
+		<part name="SiebelContactInsertOrUpdate_Output" element="tns:SiebelContactInsertOrUpdate_Output"></part>
+	</message>
+	<message name="SFATMCVContactInsertOrUpdate_Input">
+		<part name="SFATMCVContactInsertOrUpdate_Input" element="tns:SFATMCVContactInsertOrUpdate_Input"></part>
+	</message>
+	<message name="SFATMCVContactInsertOrUpdate_Output">
+		<part name="SFATMCVContactInsertOrUpdate_Output" element="tns:SFATMCVContactInsertOrUpdate_Output"></part>
+	</message>
+	<message name="SiebelContactSynchronize_Input">
+		<part name="SiebelContactSynchronize_Input" element="tns:SiebelContactSynchronize_Input"></part>
+	</message>
+	<message name="SiebelContactSynchronize_Output">
+		<part name="SiebelContactSynchronize_Output" element="tns:SiebelContactSynchronize_Output"></part>
+	</message>
+	<message name="SiebelContactQueryById_Input">
+		<part name="SiebelContactQueryById_Input" element="tns:SiebelContactQueryById_Input"></part>
+	</message>
+	<message name="SiebelContactQueryById_Output">
+		<part name="SiebelContactQueryById_Output" element="tns:SiebelContactQueryById_Output"></part>
+	</message>
+	<message name="TMPCSiebelContactQueryByExample_Input">
+		<part name="TMPCSiebelContactQueryByExample_Input" element="tns:TMPCSiebelContactQueryByExample_Input"></part>
+	</message>
+	<message name="TMPCSiebelContactQueryByExample_Output">
+		<part name="TMPCSiebelContactQueryByExample_Output" element="tns:TMPCSiebelContactQueryByExample_Output"></part>
+	</message>
+	<message name="SFATMCVContactQueryById_Input">
+		<part name="SFATMCVContactQueryById_Input" element="tns:SFATMCVContactQueryById_Input"></part>
+	</message>
+	<message name="SFATMCVContactQueryById_Output">
+		<part name="SFATMCVContactQueryById_Output" element="tns:SFATMCVContactQueryById_Output"></part>
+	</message>
+	<message name="ZBSiebelContactInsertOrUpdate_Input">
+		<part name="ZBSiebelContactInsertOrUpdate_Input" element="tns:ZBSiebelContactInsertOrUpdate_Input"></part>
+	</message>
+	<message name="ZBSiebelContactInsertOrUpdate_Output">
+		<part name="ZBSiebelContactInsertOrUpdate_Output" element="tns:ZBSiebelContactInsertOrUpdate_Output"></part>
+	</message>
+	<message name="TMPCSiebelContactInsertOrUpdate_Input">
+		<part name="TMPCSiebelContactInsertOrUpdate_Input" element="tns:TMPCSiebelContactInsertOrUpdate_Input"></part>
+	</message>
+	<message name="TMPCSiebelContactInsertOrUpdate_Output">
+		<part name="TMPCSiebelContactInsertOrUpdate_Output" element="tns:TMPCSiebelContactInsertOrUpdate_Output"></part>
+	</message>
+	<message name="RainboInsertOrUpdate_Input">
+		<part name="RainboInsertOrUpdate_Input" element="tns:RainboInsertOrUpdate_Input"></part>
+	</message>
+	<message name="RainboInsertOrUpdate_Output">
+		<part name="RainboInsertOrUpdate_Output" element="tns:RainboInsertOrUpdate_Output"></part>
+	</message>
+	<message name="ZBSiebelContactQueryById_Input">
+		<part name="ZBSiebelContactQueryById_Input" element="tns:ZBSiebelContactQueryById_Input"></part>
+	</message>
+	<message name="ZBSiebelContactQueryById_Output">
+		<part name="ZBSiebelContactQueryById_Output" element="tns:ZBSiebelContactQueryById_Output"></part>
+	</message>
+	<message name="SiebelContactQueryByExample_Input">
+		<part name="SiebelContactQueryByExample_Input" element="tns:SiebelContactQueryByExample_Input"></part>
+	</message>
+	<message name="SiebelContactQueryByExample_Output">
+		<part name="SiebelContactQueryByExample_Output" element="tns:SiebelContactQueryByExample_Output"></part>
+	</message>
+	<message name="ZBSiebelContactQueryByExample_Input">
+		<part name="ZBSiebelContactQueryByExample_Input" element="tns:ZBSiebelContactQueryByExample_Input"></part>
+	</message>
+	<message name="ZBSiebelContactQueryByExample_Output">
+		<part name="ZBSiebelContactQueryByExample_Output" element="tns:ZBSiebelContactQueryByExample_Output"></part>
+	</message>
+	<message name="SiebelContactUpdate_Input">
+		<part name="SiebelContactUpdate_Input" element="tns:SiebelContactUpdate_Input"></part>
+	</message>
+	<message name="SiebelContactUpdate_Output">
+		<part name="SiebelContactUpdate_Output" element="tns:SiebelContactUpdate_Output"></part>
+	</message>
+	<message name="TMCVSiebelContactInsertOrUpdate_Input">
+		<part name="TMCVSiebelContactInsertOrUpdate_Input" element="tns:TMCVSiebelContactInsertOrUpdate_Input"></part>
+	</message>
+	<message name="TMCVSiebelContactInsertOrUpdate_Output">
+		<part name="TMCVSiebelContactInsertOrUpdate_Output" element="tns:TMCVSiebelContactInsertOrUpdate_Output"></part>
+	</message>
+	<message name="SFATMCVContactQueryByExample_Input">
+		<part name="SFATMCVContactQueryByExample_Input" element="tns:SFATMCVContactQueryByExample_Input"></part>
+	</message>
+	<message name="SFATMCVContactQueryByExample_Output">
+		<part name="SFATMCVContactQueryByExample_Output" element="tns:SFATMCVContactQueryByExample_Output"></part>
+	</message>
+	<message name="SiebelContactInsert_Input">
+		<part name="SiebelContactInsert_Input" element="tns:SiebelContactInsert_Input"></part>
+	</message>
+	<message name="SiebelContactInsert_Output">
+		<part name="SiebelContactInsert_Output" element="tns:SiebelContactInsert_Output"></part>
+	</message>
+	<message name="SiebelContactDelete_Input">
+		<part name="SiebelContactDelete_Input" element="tns:SiebelContactDelete_Input"></part>
+	</message>
+	<message name="SiebelContactDelete_Output">
+		<part name="SiebelContactDelete_Output" element="tns:SiebelContactDelete_Output"></part>
+	</message>
+	<portType name="Default">
+		<operation name="SiebelContactInsertOrUpdate">
+			<input message="tns:SiebelContactInsertOrUpdate_Input"></input>
+			<output message="tns:SiebelContactInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="SFATMCVContactInsertOrUpdate">
+			<input message="tns:SFATMCVContactInsertOrUpdate_Input"></input>
+			<output message="tns:SFATMCVContactInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="SiebelContactSynchronize">
+			<input message="tns:SiebelContactSynchronize_Input"></input>
+			<output message="tns:SiebelContactSynchronize_Output"></output>
+		</operation>
+		<operation name="SiebelContactQueryById">
+			<input message="tns:SiebelContactQueryById_Input"></input>
+			<output message="tns:SiebelContactQueryById_Output"></output>
+		</operation>
+		<operation name="TMPCSiebelContactQueryByExample">
+			<input message="tns:TMPCSiebelContactQueryByExample_Input"></input>
+			<output message="tns:TMPCSiebelContactQueryByExample_Output"></output>
+		</operation>
+		<operation name="SFATMCVContactQueryById">
+			<input message="tns:SFATMCVContactQueryById_Input"></input>
+			<output message="tns:SFATMCVContactQueryById_Output"></output>
+		</operation>
+		<operation name="ZBSiebelContactInsertOrUpdate">
+			<input message="tns:ZBSiebelContactInsertOrUpdate_Input"></input>
+			<output message="tns:ZBSiebelContactInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="TMPCSiebelContactInsertOrUpdate">
+			<input message="tns:TMPCSiebelContactInsertOrUpdate_Input"></input>
+			<output message="tns:TMPCSiebelContactInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="RainboInsertOrUpdate">
+			<input message="tns:RainboInsertOrUpdate_Input"></input>
+			<output message="tns:RainboInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="ZBSiebelContactQueryById">
+			<input message="tns:ZBSiebelContactQueryById_Input"></input>
+			<output message="tns:ZBSiebelContactQueryById_Output"></output>
+		</operation>
+		<operation name="SiebelContactQueryByExample">
+			<input message="tns:SiebelContactQueryByExample_Input"></input>
+			<output message="tns:SiebelContactQueryByExample_Output"></output>
+		</operation>
+		<operation name="ZBSiebelContactQueryByExample">
+			<input message="tns:ZBSiebelContactQueryByExample_Input"></input>
+			<output message="tns:ZBSiebelContactQueryByExample_Output"></output>
+		</operation>
+		<operation name="SiebelContactUpdate">
+			<input message="tns:SiebelContactUpdate_Input"></input>
+			<output message="tns:SiebelContactUpdate_Output"></output>
+		</operation>
+		<operation name="TMCVSiebelContactInsertOrUpdate">
+			<input message="tns:TMCVSiebelContactInsertOrUpdate_Input"></input>
+			<output message="tns:TMCVSiebelContactInsertOrUpdate_Output"></output>
+		</operation>
+		<operation name="SFATMCVContactQueryByExample">
+			<input message="tns:SFATMCVContactQueryByExample_Input"></input>
+			<output message="tns:SFATMCVContactQueryByExample_Output"></output>
+		</operation>
+		<operation name="SiebelContactInsert">
+			<input message="tns:SiebelContactInsert_Input" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"  wsaw:action="http://siebel.com/asi/:SiebelContactInsert"></input>
+			<output message="tns:SiebelContactInsert_Output"></output>
+		</operation>
+		<operation name="SiebelContactDelete">
+			<input message="tns:SiebelContactDelete_Input"></input>
+			<output message="tns:SiebelContactDelete_Output"></output>
+		</operation>
+	</portType>
+	<binding name="Default" type="tns:Default">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document"></soap:binding>
+		<operation name="SiebelContactInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SiebelContactInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SFATMCVContactInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SFATMCVContactInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactSynchronize">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SiebelContactSynchronize"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactQueryById">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SiebelContactQueryById"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="TMPCSiebelContactQueryByExample">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:TMPCSiebelContactQueryByExample"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SFATMCVContactQueryById">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SFATMCVContactQueryById"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="ZBSiebelContactInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:ZBSiebelContactInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="TMPCSiebelContactInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:TMPCSiebelContactInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="ZBSiebelContactQueryById">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:ZBSiebelContactQueryById"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="RainboInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:RainboInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactQueryByExample">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SiebelContactQueryByExample"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="ZBSiebelContactQueryByExample">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:ZBSiebelContactQueryByExample"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="TMCVSiebelContactInsertOrUpdate">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:TMCVSiebelContactInsertOrUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactUpdate">
+			<soap:operation soapAction="document/http://siebel.com/asi/:SiebelContactUpdate"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SFATMCVContactQueryByExample">
+			<soap:operation
+				soapAction="document/http://siebel.com/asi/:SFATMCVContactQueryByExample"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactInsert">
+			<soap:operation soapAction="document/http://siebel.com/asi/:SiebelContactInsert"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+		<operation name="SiebelContactDelete">
+			<soap:operation soapAction="document/http://siebel.com/asi/:SiebelContactDelete"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+	</binding>
+	<service name="Siebel_spcContact">
+		<port binding="tns:Default" name="Default">
+			<soap:address
+				location="https://crmdmssbox.inservices.tatamotors.com/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"></soap:address>
+		</port>
+	</service>
+</definitions>
