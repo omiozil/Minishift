@@ -1,125 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:cxf="http://camel.apache.org/schema/cxf"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd         http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
-    <!-- <cxf:cxfEndpoint id="routerEndpoint" address="http://localhost:9003/CamelContext/RouterPort" 
+	xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd         http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+	<!-- <cxf:cxfEndpoint id="routerEndpoint" address="http://localhost:9003/CamelContext/RouterPort" 
 		serviceClass="org.apache.hello_world_soap_http.GreeterImpl" /> -->
-    <!-- <bean id="soapReq" class="org.example.dsl.RequestProcessor" /> -->
-    
-    <cxf:cxfEndpoint
-        address="https://crmdmssbox.inservices.tatamotors.com/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"
-        endpointName="s:Default" id="serviceEndpoint"
-        serviceName="s:Siebel_spcContact" wsdlURL="SiebelContact.wsdl" xmlns:s="http://siebel.com/asi/"/>
-        
-    <!-- 	First Commit in git Since for Minishift Deployment of this Project -->
-    <!-- <cxf:cxfEndpoint
-        address="http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx"
-        endpointName="s:HolidayService2Soap12" id="serviceEndpoint"
-        serviceName="s:HolidayService2" wsdlURL="HolidayService2.wsdl" xmlns:s="http://www.holidaywebservice.com/HolidayService_v2/"/> -->
-    <camelContext  streamCache="true" xmlns="http://camel.apache.org/schema/spring">
-        <dataFormats>
-            <json id="json" library="Jackson"/>
-        </dataFormats>
-        <route id="RT1">
-            <from id="_from1" uri="restlet:http://{{user.Host}}:{{port.WSDL}}/wsdl/example?restletMethod=POST"/>
-            <log id="_log1" message="Request Received From User_${body}"/>
-            <unmarshal id="_unmarshal1" ref="json"/>
-            <setHeader headerName="cellularPhone" id="_setHeader1">
-                <jsonpath>$.cellularPhone</jsonpath>
-            </setHeader>
-            <!-- <convertBodyTo type="java.lang.String"/> -->
-            <!-- <removeHeaders pattern="*" /> -->
-            <setHeader headerName="firstName" id="_setHeader2">
-                <jsonpath>$.firstName</jsonpath>
-            </setHeader>
-            <!-- <setHeader headerName="operationName" id="_setHeader5"> <constant>SiebelContactInsert_Input</constant> 
-				</setHeader> -->
-            <!-- <setHeader headerName="Content-Type"> <constant>text/xml;charset=UTF-8</constant> 
-				</setHeader> -->
-            <!-- <setHeader headerName="operationNamespace" id="_setHeader6"> <constant>http://siebel.com/asi/</constant> 
-				</setHeader> -->
-            <setHeader headerName="lastName" id="_setHeader3">
-                <jsonpath>$.lastName</jsonpath>
-            </setHeader>
-            <setHeader headerName="personUId" id="_setHeader4">
-                <jsonpath>$.personUId</jsonpath>
-            </setHeader>
-            <!-- <to id="_to1" uri="restlet:https://{{wsdl.URL}}/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute&amp;restletMethod=POST" 
+
+	<!-- <bean id="soapReq" class="org.example.dsl.RequestProcessor" /> -->
+	<!-- <cxf:cxfEndpoint address="https://crmdmssbox.inservices.tatamotors.com/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" 
+		endpointName="s:Default" id="serviceEndpoint" serviceName="s:Siebel_spcContact" 
+		wsdlURL="SiebelContact.wsdl" xmlns:s="http://siebel.com/asi/"/> -->
+
+	<!-- First Commit in git Since for Minishift Deployment of this Project -->
+	
+	<!-- Commit for Holiday service run  -->
+
+	<cxf:cxfEndpoint
+		address="http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx"
+		endpointName="s:HolidayService2Soap12" id="serviceEndpoint"
+		serviceName="s:HolidayService2" wsdlURL="HolidayService2.wsdl"
+		xmlns:s="http://www.holidaywebservice.com/HolidayService_v2/" />
+
+	<camelContext id="camelContext-8c5d1d58-e754-41e6-9a5b-f4a0df5ebb8a"
+		streamCache="true" xmlns="http://camel.apache.org/schema/spring">
+		<dataFormats>
+			<json id="json" library="Jackson" />
+		</dataFormats>
+		<route id="RT1">
+			<from id="_from1"
+				uri="restlet:http://{{user.Host}}:{{port.WSDL}}/wsdl/example?restletMethod=POST" />
+			<log id="_log1" message="Request Received From User_${body}" />
+			
+			<setHeader headerName="cellularPhone" id="_setHeader1">
+				<jsonpath>$.cellularPhone</jsonpath>
+			</setHeader>
+			
+			<setHeader headerName="firstName" id="_setHeader2">
+				<jsonpath>$.firstName</jsonpath>
+			</setHeader>
+			
+			<setHeader headerName="lastName" id="_setHeader3">
+				<jsonpath>$.lastName</jsonpath>
+			</setHeader>
+			<!-- <to id="_to1" uri="restlet:https://{{wsdl.URL}}/eai_secure_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute&amp;restletMethod=POST" 
 				/> -->
-            <setBody id="_setBody1">
-                <simple>&lt;soapenv:Envelope
-    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:asi="http://siebel.com/asi/"
-    xmlns:con="http://www.siebel.com/xml/Contact%20Interface"&gt;
-    &lt;soapenv:Header&gt;
-        &lt;wsse:Security
-            xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext"&gt;
-            &lt;wsse:UsernameToken
-                xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"&gt;
-                &lt;wsse:Username&gt;TMPCPRDADMIN&lt;/wsse:Username&gt;
-                &lt;wsse:Password Type="wsse:PasswordText"&gt;stmpcprdadmin&lt;/wsse:Password&gt;
-            &lt;/wsse:UsernameToken&gt;
-        &lt;/wsse:Security&gt;
-    &lt;/soapenv:Header&gt;
-    &lt;soapenv:Body&gt;
-        &lt;asi:TMPCSiebelContactInsertOrUpdate_Input&gt;
-            &lt;con:ListOfContactInterface&gt;
-                &lt;Contact&gt;
-                    &lt;Gender&gt;M&lt;/Gender&gt;
-                    &lt;IntegrationId&gt;15582779397&lt;/IntegrationId&gt;
-                    &lt;CellularPhone&gt;6886486486&lt;/CellularPhone&gt;
-                    &lt;FirstName&gt;Seema&lt;/FirstName&gt;
-                    &lt;LastName&gt;Joshi&lt;/LastName&gt;
-                    &lt;EmailAddress&gt;uga@hhs.com&lt;/EmailAddress&gt;
-                    &lt;INSOccupation&gt;Rural Taxi operator&lt;/INSOccupation&gt;
-                    &lt;BirthDate&gt;04/05/2001&lt;/BirthDate&gt;
-                    &lt;ListOfPersonalAddress&gt;
-                        &lt;PersonalAddress&gt;
-                            &lt;IntegrationId&gt;15582779397&lt;/IntegrationId&gt;
-                            &lt;PersonalAddressName&gt;mmmm datt mandir pashan. aaaaaa kkk&lt;/PersonalAddressName&gt;
-                            &lt;PersonalStreetAddress&gt;ppp road NDA pashan qqqqqqmmm &lt;/PersonalStreetAddress&gt;
-                            &lt;PersonalStreetAddress2&gt;&lt;/PersonalStreetAddress2&gt;
-                            &lt;TMArea&gt;PUNE&lt;/TMArea&gt;
-                            &lt;PersonalCountry&gt;India&lt;/PersonalCountry&gt;
-                            &lt;PersonalState&gt;MH&lt;/PersonalState&gt;
-                            &lt;TMDistrict&gt;PUNE&lt;/TMDistrict&gt;
-                            &lt;PersonalCity&gt;PUNE&lt;/PersonalCity&gt;
-                            &lt;TMTaluka&gt;PUNE&lt;/TMTaluka&gt;
-                            &lt;PersonalPostalCode&gt;411021&lt;/PersonalPostalCode&gt;
-                            &lt;TMPanchayat&gt;pune&lt;/TMPanchayat&gt;
-                        &lt;/PersonalAddress&gt;
-                    &lt;/ListOfPersonalAddress&gt;
-                    &lt;ListOfRelatedSalesRep&gt;
-                        &lt;RelatedSalesRep IsPrimaryMVG="Y"&gt;
-                            &lt;Position&gt;TMPC-Sal-W-MH-3004450-Chembur-Car-DSE-21&lt;/Position&gt;
-                            &lt;Id&gt;1-1YO6&lt;/Id&gt;
-                            &lt;Login&gt;MRUPANI_3004450&lt;/Login&gt;
-                            &lt;Division&gt;3004450-Sales-Chembur-Wasan&lt;/Division&gt;
-                        &lt;/RelatedSalesRep&gt;
-                    &lt;/ListOfRelatedSalesRep&gt;
-                    &lt;ListOfRelatedOrganization&gt;
-                        &lt;RelatedOrganization IsPrimaryMVG="Y"&gt;
-                            &lt;Id&gt;1-6TL&lt;/Id&gt;
-                            &lt;Organization&gt;WASAN MOTORS LTD.1&lt;/Organization&gt;
-                        &lt;/RelatedOrganization&gt;
-                    &lt;/ListOfRelatedOrganization&gt;
-                    &lt;PersonalTitle&gt;Miss&lt;/PersonalTitle&gt;
-                    &lt;TMCellPhone/&gt;
-                &lt;/Contact&gt;
-            &lt;/con:ListOfContactInterface&gt;
-            &lt;asi:StatusObject&gt;&lt;/asi:StatusObject&gt;
-        &lt;/asi:TMPCSiebelContactInsertOrUpdate_Input&gt;
-    &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;</simple>
-            </setBody>
-            <log id="_log2" message="Request Sent to Siebel______ ${body}"/>
-            <to id="_to2" uri="log:before?showHeaders=true"/>
-            <to id="_to1" uri="cxf:bean:serviceEndpoint?dataFormat=MESSAGE"/>
-            <setHeader headerName="holidays" id="_setHeader5">
-                <xpath resultType="java.lang.String">/GetHolidaysForMonthResponse/GetHolidaysForMonthResult/Holiday/Country</xpath>
-            </setHeader>
-            <log id="_log4" message="Header is___________________${header.holidays}"/>
-            <log id="_log3" message="Response Body Received at Siebel______ ${body}"/>
-        </route>
-    </camelContext>
+			<setHeader headerName="personUId" id="_setHeader4">
+				<jsonpath>$.personUId</jsonpath>
+			</setHeader>
+			
+			<setBody id="_setBody1">
+				<simple>&lt;soap:Envelope xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:hol=&quot;http://www.holidaywebservice.com/HolidayService_v2/&quot;&gt;
+   &lt;soap:Header/&gt;
+   &lt;soap:Body&gt;
+      &lt;hol:GetCountriesAvailable/&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</simple>
+			</setBody>
+						<removeHeaders pattern="*" />
+			
+			<log id="_log2" message="Request Sent to Siebel______ ${body}" />
+			<to id="_to2" uri="log:before?showHeaders=true" />
+			
+			<to id="_to1" uri="cxf:bean:serviceEndpoint?dataFormat=MESSAGE" />
+			
+			<log id="_log3" message="Response Body Received at Siebel______ ${body}" />
+		</route>
+	</camelContext>
 </beans>

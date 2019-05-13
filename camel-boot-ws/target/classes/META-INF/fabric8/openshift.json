@@ -6,13 +6,14 @@
     "kind" : "Service",
     "metadata" : {
       "annotations" : {
-        "fabric8.io/git-commit" : "92b73f37b9cbf03be6e35fcc92235873d72fda82",
+        "fabric8.io/git-commit" : "21ad4dfb75f0cda911528cd085b9d2be53e8b3da",
         "fabric8.io/iconUrl" : "img/icons/camel.svg",
         "fabric8.io/git-branch" : "master",
         "prometheus.io/scrape" : "true",
         "prometheus.io/port" : "9779"
       },
       "labels" : {
+        "expose" : "true",
         "app" : "camel-boot-ws",
         "provider" : "fabric8",
         "version" : "1.0-SNAPSHOT",
@@ -22,10 +23,10 @@
     },
     "spec" : {
       "ports" : [ {
-        "name" : "dynamid",
-        "port" : 9002,
+        "name" : "http",
+        "port" : 8080,
         "protocol" : "TCP",
-        "targetPort" : 9002
+        "targetPort" : 8080
       } ],
       "selector" : {
         "app" : "camel-boot-ws",
@@ -38,7 +39,7 @@
     "kind" : "DeploymentConfig",
     "metadata" : {
       "annotations" : {
-        "fabric8.io/git-commit" : "92b73f37b9cbf03be6e35fcc92235873d72fda82",
+        "fabric8.io/git-commit" : "21ad4dfb75f0cda911528cd085b9d2be53e8b3da",
         "fabric8.io/iconUrl" : "img/icons/camel.svg",
         "fabric8.io/git-branch" : "master",
         "fabric8.io/metrics-path" : "dashboard/file/camel-routes.json/?var-project=camel-boot-ws&var-version=1.0-SNAPSHOT"
@@ -68,7 +69,7 @@
       "template" : {
         "metadata" : {
           "annotations" : {
-            "fabric8.io/git-commit" : "92b73f37b9cbf03be6e35fcc92235873d72fda82",
+            "fabric8.io/git-commit" : "21ad4dfb75f0cda911528cd085b9d2be53e8b3da",
             "fabric8.io/iconUrl" : "img/icons/camel.svg",
             "fabric8.io/git-branch" : "master",
             "fabric8.io/metrics-path" : "dashboard/file/camel-routes.json/?var-project=camel-boot-ws&var-version=1.0-SNAPSHOT"
@@ -90,7 +91,7 @@
                 }
               }
             } ],
-            "image" : "wsdl/camel-boot-ws:snapshot-190502-175006-0894",
+            "image" : "wsdl/camel-boot-ws:snapshot-190513-115432-0682",
             "imagePullPolicy" : "IfNotPresent",
             "livenessProbe" : {
               "httpGet" : {
@@ -102,8 +103,8 @@
             },
             "name" : "spring-boot",
             "ports" : [ {
-              "containerPort" : 9002,
-              "name" : "dynamid",
+              "containerPort" : 8080,
+              "name" : "http",
               "protocol" : "TCP"
             }, {
               "containerPort" : 9779,
@@ -139,6 +140,28 @@
       "triggers" : [ {
         "type" : "ConfigChange"
       } ]
+    }
+  }, {
+    "apiVersion" : "route.openshift.io/v1",
+    "kind" : "Route",
+    "metadata" : {
+      "labels" : {
+        "expose" : "true",
+        "app" : "camel-boot-ws",
+        "provider" : "fabric8",
+        "version" : "1.0-SNAPSHOT",
+        "group" : "org.example.wsdl"
+      },
+      "name" : "camel-boot-ws"
+    },
+    "spec" : {
+      "port" : {
+        "targetPort" : 8080
+      },
+      "to" : {
+        "kind" : "Service",
+        "name" : "camel-boot-ws"
+      }
     }
   } ]
 }
